@@ -7,7 +7,7 @@ import {Movie} from '../interfaces/Movie';
   providedIn: 'root'
 })
 export class SearchService {
-  apiKey = '61896784c32256ebb118099bf12122fc';
+  apiKey = '  '; // enter key from movieDB API
 
   constructor(private httpClient: HttpClient) {
   }
