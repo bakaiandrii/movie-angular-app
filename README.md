@@ -1,4 +1,5 @@
 # MovieAngularApp
+Frontend app for searching movies (using The movieDB API)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
