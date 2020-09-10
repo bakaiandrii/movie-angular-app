@@ -9,8 +9,8 @@ import {Observable} from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  numberOfLikedFilms: Observable<number>;
-  constructor(private movieService: MovieService) { }
+
+  constructor() { }
 
   ngOnInit(): void {
 
