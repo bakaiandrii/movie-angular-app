@@ -1,0 +1,15 @@
+
+  <div class="col s12 m6 l3">
+    <div class="card ">
+      <div class="card-image ">
+        <img *ngIf="!movie.poster_path" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRPXJqRinkkUQLo18-X0VMXyB4ssgALfz_yhA&usqp=CAU">
+        <img *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+        <span class="card-title">{{movie.title}}</span>
+        <a class="btn-floating halfway-fab waves-effect waves-light light-green" (click)="addToList(movie)"><i class="material-icons">add</i></a>
+      </div>
+      <div class="card-content">
+        <p (click)="navigate(movie)"><a>View details...</a></p>
+      </div>
+    </div>
+  </div>
+

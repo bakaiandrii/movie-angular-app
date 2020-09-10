@@ -1,0 +1,11 @@
+<div class="container">
+  <h3>List of favorite movies</h3>
+  <div class="row">
+  <app-movie-list-card *ngFor="let m of movies" [movie]="m"></app-movie-list-card>
+  </div>
+  <div class="row">
+  <button [ngClass]="movies.length == 0 ? 'disabled': 'red'" class="btn waves-effect waves-light" type="submit" name="action" (click)="clearList()">Delete
+    <i class="material-icons right">delete</i>
+  </button>
+  </div>
+</div>

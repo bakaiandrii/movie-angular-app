@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <section class="col s6 offset-s6 " >
+      <form  (ngSubmit)="searchMovie()">
+        <div class="input-field ">
+          <input  [(ngModel)]="searchItem" name="searchItem" placeholder="Search movie" type="text">
+        </div>
+      </form>
+
+    </section>
+    <app-movie-list-card *ngFor="let m of movies" [movie]="m"></app-movie-list-card>
+  </div>
+  <div class="row">
+    <ul *ngIf="totalResults > 20" class="pagination">
+      <li [ngClass]="page == 1? 'disabled' : 'waves-effect'"><a (click)="prevPage(page)"><i class="material-icons">chevron_left</i></a></li>
+
+      <li [ngClass]=" in + 1 == page ? 'active' : 'waves-effect'" *ngFor="let i of getArrayFromNumber(totalPages); let in = index" (click)="changePage(in + 1)" ><a>{{in + 1}}</a></li>
+
+      <li [ngClass]="page == totalPages? 'disabled' : 'waves-effect'" (click)="nextPage(page)"><a ><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  </div>
+</div>
+
+
